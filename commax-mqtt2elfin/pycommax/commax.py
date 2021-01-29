@@ -40,13 +40,13 @@ def find_device(config):
     device_num = {statePrefix[prefix]: 0 for prefix in statePrefix}
     collect_data = {statePrefix[prefix]: set() for prefix in statePrefix}
 
-    target_time = time.time() + 20
+    target_time = time.time() + 360
 
     def on_connect(client, userdata, flags, rc):
-        userdata = time.time() + 20
+        userdata = time.time() + 360
         if rc == 0:
             log("Connected to MQTT broker..")
-            log("Find devices for 20s..")
+            log("Find devices for 360s..")
             client.subscribe('ew11/#', 0)
         else:
             errcode = {1: 'Connection refused - incorrect protocol version',
