@@ -69,7 +69,7 @@ def find_device(config):
                 else:
                     device_num[name] = 1
 
-    mqtt_client = mqtt.Client('mqtt2elfin-commax')
+    mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, 'mqtt2elfin-commax')
     mqtt_client.username_pw_set(config['mqtt_id'], config['mqtt_password'])
     mqtt_client.on_connect = on_connect
     mqtt_client.on_message = on_message
@@ -446,7 +446,7 @@ def do_work(config, device_list):
         except:
             pass
 
-    mqtt_client = mqtt.Client('mqtt2elfin-commax')
+    mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, 'mqtt2elfin-commax')
     mqtt_client.username_pw_set(config['mqtt_id'], config['mqtt_password'])
     mqtt_client.on_connect = on_connect
     mqtt_client.on_message = on_message

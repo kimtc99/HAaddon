@@ -1,6 +1,7 @@
 Homeassistant addons
 ====================
 ### 자세한 설명은 해당 폴더에서 확인하세요.
+HAOS 버전업에 따라 paho.mqtt.python 버전이 바뀐 후 commax-mqtt2elfin 애드온에서 제대로 동작하지 않는 부분 수정을 위한 포크
 
 ## CC2531 플래싱 애드온
 ### [ha-flash-cc2531](https://github.com/kimtc99/HAaddon/tree/master/ha-flash-cc2531)
